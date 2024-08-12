@@ -1,27 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
     <div className="container-fluid">
-      <Link className={`navbar-brand text-${props.mode==='light'?'dark':'light'}`} to="/">{props.title}</Link>
+      <a className={`navbar-brand text-${props.mode==='light'?'dark':'light'}`} href ="#">{props.title}</a>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="collapse navbar-collapse  justify-content-between" id="navbarSupportedContent">
         <ul className="navbar-nav  mb-2 mb-lg-0">
           <li className="nav-item">
-            <Link className={`nav-link active  text-${props.mode==='light'?'dark':'light'}`} aria-current="page" to="/">Home</Link>
+            <a className={`nav-link active  text-${props.mode==='light'?'dark':'light'}`} aria-current="page" href="#">Home</a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className={`nav-link  text-${props.mode==='light'?'dark':'light'}`} to="/about">{props.aboutText}</Link>
-          </li>
+          </li> */}
          
           <li className="nav-item">
-            <Link className={`nav-link  text-${props.mode==='light'?'dark':'light'}`} aria-disabled="true" to='/'>Blog</Link>
+            <a className={`nav-link  text-${props.mode==='light'?'dark':'light'}`} aria-disabled="true" href='/'>Blog</a>
           </li>
         </ul>
 

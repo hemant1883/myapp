@@ -4,15 +4,15 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Form from './components/Form';
 
-import About from './components/About';
+// import About from './components/About';
 import { useState } from 'react';
 
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+//   Link
+// } from "react-router-dom";
 
 
 function App() {
@@ -47,21 +47,21 @@ else{
 
   return (
   <>
-<Router>
+{/* <Router> */}
 <Navbar  aboutText="about" title="Text Manager" mode={mode} tooglemode={tooglemode}/>
 
 <div className="container">
-<Routes>
-<Route path="/about" element={<About mode={mode} />} />
+{/* <Routes> */}
+{/* <Route path="/about" element={<About mode={mode} />} /> */}
          
-<Route path="/" element={<Form mode={mode} heading="Text Manager" />} />
-          
-        </Routes>
+{/* <Route path="/" element={<Form mode={mode} heading="Text Manager" />} /> */}
+          <Form/>
+        {/* </Routes> */}
 
 
 
 </div>
-</Router>
+{/* </Router> */}
 </>
   );
 }
